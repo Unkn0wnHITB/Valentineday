@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -34,6 +34,19 @@
             background-color: #ff9999;
             color: #fff;
         }
+        .hidden {
+            display: none;
+        }
+        .valentine-image {
+            max-width: 100%;
+            max-height: 80vh;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        } 
+    
     </style>
 </head>
 <body>
@@ -43,14 +56,31 @@
         <button class="btn btn-no" onclick="showNo()">No</button>
     </div>
 
+    <img src="vali.jpg" alt="Valentine Image" class="valentine-image hidden" id="valentineImage">
+
     <script>
+        a = 0;
         function showYey() {
-            alert("YEY!!!");
+            document.querySelector('h1').textContent = "YEY!!!";
+            document.querySelector('h1').innerHTML += "<br/>I love you!!!❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
+            document.getElementById('valentineImage').classList.remove('hidden');
         }
 
-        function showNo() {
-            document.querySelector('.btn-no').style.display = 'none';
-            document.querySelector('h1').textContent = "No is not an option";
+        function showNo() { 
+            if (a == 0) {
+            document.querySelector('h1').textContent = "Baby :c";
+            a++;
+            } else if (a == 1){
+                document.querySelector('h1').innerHTML += "<br/>Why? :c";
+                a++;
+            }else if (a == 2){
+                document.querySelector('h1').innerHTML += "<br/>I love you :c";
+                a++;
+            }else if (a == 3){
+                document.querySelector('.btn-no').style.display = 'none';
+                document.querySelector('h1').textContent = "No is not an option anymore";
+            }
+            
         }
     </script>
 </body>
