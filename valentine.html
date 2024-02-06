@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #e6005c;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn-yes {
+            background-color: #e6005c;
+            color: #fff;
+        }
+        .btn-no {
+            background-color: #ff9999;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will You Be My Valentine?</h1>
+        <button class="btn btn-yes" onclick="showYey()">Yes</button>
+        <button class="btn btn-no" onclick="showNo()">No</button>
+    </div>
+
+    <script>
+        function showYey() {
+            alert("YEY!!!");
+        }
+
+        function showNo() {
+            document.querySelector('.btn-no').style.display = 'none';
+            document.querySelector('h1').textContent = "No is not an option";
+        }
+    </script>
+</body>
+</html>
